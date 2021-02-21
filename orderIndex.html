@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>point of sale | Danuja</title>
+    <link rel="stylesheet" href="asserts/css/bootstrap.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-dark sticky-top">
+    <div class="container-fluid ">
+        <a class="navbar-brand" href="index.html">
+            <img src="asserts/img/pos-logo.png" alt="" width="50" height="44">
+        </a>
+        <a class="navbar-brand text-white " href="index.html">Dashboard</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="customerManageIndex.html">Manage Customer</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="itemManageFormIndex.html">Manage Item</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#">Place Order</a>
+                </li>
+            </ul>
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+</nav>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-7">
+            <!--//this is for place order side-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <!--//this is for form part-->
+                        <form class="mt-3 d-inline-block">
+                            <div class="mb-3">
+                                <label for="orderID" class="form-label">Order ID</label>
+                                <input type="text" class="form-control" id="orderID" aria-describedby="orderID">
+                            </div>
+                        </form>
+                        <div class="dropdown d-inline-block">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Select Customer ID
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">C001</a>
+                                <a class="dropdown-item" href="#">C002</a>
+                                <a class="dropdown-item" href="#">C003</a>
+                                <a class="dropdown-item" href="#">C004</a>
+                                <a class="dropdown-item" href="#">C005</a>
+                            </div>
+                        </div>
+                        <form class="mt-3 d-inline-block">
+                            <div class="mb-3">
+                                <label for="customerName" class="form-label">Customer Name</label>
+                                <input type="text" class="form-control" id="customerName" aria-describedby="customerName">
+                            </div>
+                        </form>
+                        <div class="dropdown d-inline-block">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownItemCode" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Select Item Code
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">I001</a>
+                                <a class="dropdown-item" href="#">I002</a>
+                                <a class="dropdown-item" href="#">I003</a>
+                                <a class="dropdown-item" href="#">I004</a>
+                                <a class="dropdown-item" href="#">I005</a>
+                            </div>
+                        </div>
+                        <form class="mt-3 d-inline-block">
+                            <div class="mb-3">
+                                <label for="description" class="form-label">Description</label>
+                                <input type="text" class="form-control" id="description" aria-describedby="description">
+                            </div>
+                        </form>
+                        <form class="mt-3 d-inline-block">
+                            <div class="mb-3">
+                                <label for="unitPrice" class="form-label">Unit Price</label>
+                                <input type="text" class="form-control" id="unitPrice" aria-describedby="unitPrice">
+                            </div>
+                        </form>
+                        <form class="mt-3 d-inline-block">
+                            <div class="mb-3">
+                                <label for="qty" class="form-label">Qty</label>
+                                <input type="text" class="form-control" id="qty" aria-describedby="qty">
+                            </div>
+                        </form>
+
+                    </div>
+
+                    <div class=" col-sm mx-0">
+                        <!--//this is for talbe part-->
+                        <section class="container">
+                            <div class="col-12">
+                                <table class="container-fluid table table-hover mt-2">
+                                    <thead class="bg-success text-white">
+                                    <tr>
+                                        <th>Product ID</th>
+                                        <th>Description</th>
+                                        <th>Unit Price</th>
+                                        <th>QTY</th>
+                                        <th>Total</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody class="table table-hover">
+                                    <tr>
+                                        <td>I002</td>
+                                        <td>Sugar 1KG</td>
+                                        <td>150.00</td>
+                                        <td>2</td>
+                                        <td>300.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>I001</td>
+                                        <td>Dhal 5KG</td>
+                                        <td>150.00</td>
+                                        <td>1</td>
+                                        <td>150..</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>I009</td>
+                                        <td>Sprite</td>
+                                        <td>65.00</td>
+                                        <td>2</td>
+                                        <td>130.00</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>I005</td>
+                                        <td>Yogurt</td>
+                                        <td>25.00</td>
+                                        <td>4</td>
+                                        <td>100.00</td>
+                                    </tr>
+                                    </tbody>
+                                    <tbody>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-5">
+            <!--//this is for total side-->
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <!--One of three columns-->
+                        <div class="col-12">
+                            <div class="card mt-4">
+                                <div class="card-body">
+                                    <h5 class="card-title align-items-center">Order Detail</h5>
+                                    <form class="mt-3">
+                                        <div class="mb-3">
+                                            <label for="total" class="form-label badge bg-danger fs-1 align-content-end text-wrap">Total</label>
+                                            <input type="text" class="form-control" id="total" aria-describedby="total">
+                                        </div>
+
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <!--One of three columns-->
+                        <div class="col-12">
+                            <div class="card mt-5">
+                                <div class="card-body">
+                                    <form class="mt-3">
+                                        <div class="mb-3">
+                                            <label for="cash" class="form-label fs-3">cash</label>
+                                            <input type="text" class="form-control" id="cash" aria-describedby="cash">
+                                        </div>
+
+                                    </form>
+                                    <form class="mt-3">
+                                        <div class="mb-3">
+                                            <label for="exchangeCost" class="form-label fs-3 text-danger">Exchange Cost</label>
+                                            <input type="text" class="form-control" id="exchangeCost" aria-describedby="exchangeCost">
+                                        </div>
+
+                                    </form>
+                                    <a href="#" class="btn btn-primary w-100 rounded-pill">Pay</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="asserts/js/bootstrap.js"></script>
+</body>
+</html>
